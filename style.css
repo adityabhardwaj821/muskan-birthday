@@ -1,0 +1,527 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffddec,
+      #f8b6d2
+    );
+
+  color: #8e174d;
+  overflow-x: hidden;
+}
+
+
+/* PAGES */
+
+.page {
+  min-height: 100vh;
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px 15px;
+}
+
+.page.active {
+  display: flex;
+}
+
+
+/* CARD */
+
+.card {
+
+  width: min(720px, 95vw);
+
+  min-height: 80vh;
+
+  padding: 40px 25px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 240, 248, 0.8);
+
+  border: 1px solid white;
+
+  box-shadow:
+    0 20px 60px rgba(130, 20, 70, .18);
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* TEXT */
+
+h1 {
+  font-size: clamp(35px, 7vw, 55px);
+
+  color: #a41458;
+
+  font-style: italic;
+
+  margin: 15px 0 5px;
+}
+
+h2 {
+  color: #c51d67;
+
+  font-size: clamp(30px, 6vw, 45px);
+
+  font-style: italic;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+.small {
+  color: #a84a76;
+}
+
+.sub {
+  font-size: 18px;
+}
+
+
+/* BUTTONS */
+
+button {
+
+  border: none;
+
+  padding: 15px 30px;
+
+  margin: 8px;
+
+  border-radius: 15px;
+
+  background: #ed1768;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(237, 23, 104, .25);
+
+  transition: .2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button.no {
+
+  background: white;
+
+  color: #a41458;
+
+  border: 2px solid #efb1cc;
+}
+
+
+/* SMALL CAKE */
+
+.cake {
+
+  width: 220px;
+
+  height: 150px;
+
+  margin: 35px auto;
+
+  position: relative;
+}
+
+.cakeBody {
+
+  position: absolute;
+
+  width: 170px;
+  height: 70px;
+
+  left: 25px;
+  bottom: 10px;
+
+  background: #733522;
+
+  border-radius:
+    15px 15px 30px 30px;
+}
+
+.cream {
+
+  position: absolute;
+
+  width: 170px;
+  height: 45px;
+
+  left: 25px;
+  bottom: 60px;
+
+  background: #fff5ed;
+
+  border-radius: 25px;
+}
+
+.candle {
+
+  position: absolute;
+
+  z-index: 5;
+
+  width: 12px;
+  height: 40px;
+
+  left: 104px;
+  bottom: 100px;
+
+  background: #c72c68;
+
+  border-radius: 5px;
+}
+
+.flame {
+
+  position: absolute;
+
+  z-index: 6;
+
+  width: 15px;
+  height: 20px;
+
+  left: 102px;
+  bottom: 138px;
+
+  background: #ffb000;
+
+  border-radius: 50%;
+}
+
+
+/* BALLOONS */
+
+.balloons {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  max-width: 500px;
+
+  margin: 45px auto;
+}
+
+.balloon {
+
+  width: 110px;
+  height: 135px;
+
+  border-radius: 50%;
+
+  padding: 0;
+
+  position: relative;
+
+  transition: .3s;
+}
+
+.balloon::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+  height: 65px;
+
+  background: #a47791;
+
+  left: 50%;
+
+  top: 130px;
+}
+
+.blue {
+  background: #72c9f7;
+}
+
+.pink {
+  background: #ff9fbd;
+}
+
+.green {
+  background: #70d9bb;
+}
+
+.purple {
+  background: #a99af5;
+}
+
+.popped {
+
+  transform: scale(1.6);
+
+  opacity: 0;
+
+}
+
+#words {
+
+  font-size: 30px;
+
+  font-weight: bold;
+
+  font-style: italic;
+
+  min-height: 40px;
+
+  color: #a41458;
+}
+
+
+/* BIG CAKE */
+
+.bigCake {
+
+  width: 300px;
+
+  height: 350px;
+
+  margin: auto;
+
+  position: relative;
+}
+
+.plate {
+
+  position: absolute;
+
+  bottom: 40px;
+
+  left: 10px;
+
+  width: 280px;
+
+  height: 35px;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+.bigCakeBody {
+
+  position: absolute;
+
+  bottom: 65px;
+
+  left: 45px;
+
+  width: 210px;
+
+  height: 120px;
+
+  background: #6d301f;
+
+  border-radius: 20px 20px 40px 40px;
+}
+
+.icing {
+
+  position: absolute;
+
+  bottom: 140px;
+
+  left: 45px;
+
+  width: 210px;
+
+  height: 65px;
+
+  background: #fff5e8;
+
+  border-radius: 30px 30px 20px 20px;
+
+  z-index: 2;
+}
+
+.bigCandle {
+
+  position: absolute;
+
+  bottom: 205px;
+
+  left: 143px;
+
+  width: 15px;
+
+  height: 70px;
+
+  background: #a72c55;
+
+  z-index: 5;
+}
+
+#bigFlame {
+
+  position: absolute;
+
+  bottom: 270px;
+
+  left: 138px;
+
+  width: 25px;
+
+  height: 35px;
+
+  background: #ffb000;
+
+  border-radius: 50%;
+
+  z-index: 6;
+
+  box-shadow: 0 0 25px #ffd45e;
+}
+
+
+/* PHOTO */
+
+.photoBox {
+
+  background: white;
+
+  padding: 15px;
+
+  border-radius: 25px;
+
+  max-width: 600px;
+
+  margin: 30px auto;
+
+  box-shadow:
+    0 15px 40px rgba(130, 20, 70, .15);
+}
+
+.photoBox img {
+
+  width: 100%;
+
+  height: 520px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+}
+
+.photoBox h2 {
+
+  font-size: 23px;
+
+  margin: 10px;
+}
+
+
+/* LETTER */
+
+.letter {
+
+  background: #fffaf5;
+
+  border: 2px solid #ead9c9;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  max-width: 620px;
+
+  margin: 30px auto;
+
+  text-align: left;
+
+  line-height: 1.7;
+
+  color: #3d3030;
+
+  font-family: Arial, sans-serif;
+}
+
+.letter h2 {
+
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+}
+
+
+/* CONFETTI */
+
+.confetti {
+
+  position: fixed;
+
+  top: -20px;
+
+  z-index: 100;
+
+  animation: fall 3s linear forwards;
+
+  pointer-events: none;
+}
+
+@keyframes fall {
+
+  to {
+
+    transform:
+      translateY(110vh)
+      rotate(720deg);
+
+    opacity: 0;
+  }
+}
+
+
+/* MOBILE */
+
+@media(max-width:520px) {
+
+  .card {
+    padding: 30px 15px;
+  }
+
+  .balloon {
+    width: 90px;
+    height: 110px;
+  }
+
+  .photoBox img {
+    height: 430px;
+  }
+
+  .letter {
+    padding: 22px;
+  }
+
+}

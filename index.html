@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Muskan ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <div class="card">
+
+    <p class="small">A little birthday surprise for you ✨</p>
+
+    <h1>Happy Birthday,</h1>
+    <h2>Muskan ❤️</h2>
+
+    <div class="cake">
+      <div class="flame"></div>
+      <div class="candle"></div>
+      <div class="cream"></div>
+      <div class="cakeBody"></div>
+    </div>
+
+    <h3>Are you excited for what's next? 🥰</h3>
+
+    <button onclick="nextPage(2)">Yes 💗</button>
+    <button class="no" onclick="nextPage(2)">No 😌</button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <div class="card">
+
+    <h1>Pop all 4 balloons 🎈</h1>
+    <p>Tap all the balloons to reveal your surprise.</p>
+
+    <div class="balloons">
+
+      <div>
+        <button class="balloon blue" onclick="pop(this,'You')"></button>
+        <span></span>
+      </div>
+
+      <div>
+        <button class="balloon pink" onclick="pop(this,'are')"></button>
+        <span></span>
+      </div>
+
+      <div>
+        <button class="balloon green" onclick="pop(this,'so')"></button>
+        <span></span>
+      </div>
+
+      <div>
+        <button class="balloon purple" onclick="pop(this,'special')"></button>
+        <span></span>
+      </div>
+
+    </div>
+
+    <div id="words"></div>
+
+    <button id="nextBalloon" onclick="nextPage(3)" style="display:none;">
+      Next 💕
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <div class="card">
+
+    <h1>Blow the candle, Muskan 🕯️</h1>
+
+    <div class="bigCake">
+
+      <div id="bigFlame"></div>
+
+      <div class="bigCandle"></div>
+
+      <div class="icing"></div>
+
+      <div class="bigCakeBody"></div>
+
+      <div class="plate"></div>
+
+    </div>
+
+    <button onclick="blowCandle()">💨 Blow into the mic</button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <div class="card">
+
+    <h1>Some Sweet Moments 💕</h1>
+
+    <p class="sub">A few beautiful memories for your special day ✨</p>
+
+    <div class="photoBox">
+
+      <h2>The cutest birthday surprise ever!! 🥹❤️</h2>
+
+      <img src="c:\Users\adity\Downloads\muskan 1.jpg" alt="Muskan">
+      <img src="c:\Users\adity\Downloads\muskan2.jpg" alt="Muskan">
+
+      <h2>Celebrating You 🎉</h2>
+
+    </div>
+
+    <button onclick="nextPage(5)">
+      One Last Thing 💌
+    </button>
+
+  </div>
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+  <div class="card">
+
+    <h1>A Message From My Heart 💗</h1>
+
+    <div class="letter">
+
+      <h2>Dear Muskan,</h2>
+
+      <p>
+        Happy Birthday! 🎂❤️
+      </p>
+
+      <p>
+        May your life always be filled with happiness,
+        beautiful moments and countless reasons to smile.
+
+      <p>
+       
+
+      <h2>
+        Happy Birthday Muskan! ❤️🎂✨
+      </h2>
+
+    </div>
+
+    <button onclick="celebrate()">
+      🎉 Celebrate
+    </button>
+
+  </div>
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
